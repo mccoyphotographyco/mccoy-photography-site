@@ -404,31 +404,48 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <form className="grid gap-4">
+
+            <form
+              action="https://formspree.io/f/xlgavpvq"
+              method="POST"
+              className="grid gap-4"
+            >
+              <input type="hidden" name="_subject" value="New website inquiry" />
+
               <div className="grid gap-4 md:grid-cols-2">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
                   className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-white/30"
+                  required
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email address"
                   className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-white/30"
+                  required
                 />
               </div>
+
               <input
                 type="text"
+                name="service"
                 placeholder="What are you looking for?"
                 className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-white/30"
               />
+
               <textarea
                 rows={6}
+                name="message"
                 placeholder="Tell me about your event, session, or business project"
                 className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-white/30"
+                required
               />
+
               <button
-                type="button"
+                type="submit"
                 className="w-fit rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]"
               >
                 Send Inquiry
